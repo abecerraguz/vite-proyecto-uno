@@ -8,8 +8,8 @@ export default defineConfig({
       modernPolyfills: ['es.promise.finally']
 		})
 	],
-	// build: {
-	// 	manifest: true,
-	// }
-	base: '/vite-proyecto-uno/',
+	build: {
+		manifest: true,
+	},
+	base: '/vite-proyecto-uno/'
 });
