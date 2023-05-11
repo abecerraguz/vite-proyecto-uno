@@ -22,3 +22,30 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+
+/*** archivo src/for-anidados.js ***/
+for (let i = 0; i < 3; i++) {
+  console.log(i);
+  let log = '';
+  for (let i = 0; i < 3; i++) {
+      log = i;
+      console.log(log);
+  };
+};
+
+for (let i of [1, 2, 3, 4, 5]) {
+  console.log(i);
+}
+
+async function asincronica() {
+
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("doneXXXXXXXXXXXXX!"), 1000)
+  });
+
+  let result = await promise; // wait until the promise resolves (*)
+
+  alert(result); // "done!"
+}
+
+asincronica();
